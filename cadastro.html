@@ -1,0 +1,111 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Casa Aurora — Cadastro</title>
+  <meta name="description" content="Formulário de cadastro para voluntariado e contato com a Casa Aurora.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page">
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <h1 class="site-title">Casa Aurora</h1>
+      <nav aria-label="Menu principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro/Voluntariado</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section aria-labelledby="form-title" class="form-section">
+      <h2 id="form-title">Cadastro — Voluntariado / Contato</h2>
+      <p class="lead">Preencha seus dados. Campos com <span aria-hidden="true">*</span> são obrigatórios.</p>
+
+      <form id="cadastroForm" action="#" method="post" novalidate>
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+
+          <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+          <input id="nome" name="nome" type="text" autocomplete="name" required minlength="3">
+
+          <label for="email">E‑mail <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="cpf">CPF <span aria-hidden="true">*</span></label>
+          <input id="cpf" name="cpf" type="text" inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required aria-describedby="cpfHelp">
+          <small id="cpfHelp">Formato: 000.000.000-00</small>
+
+          <label for="telefone">Telefone</label>
+          <input id="telefone" name="telefone" type="tel" inputmode="tel" placeholder="(00) 00000-0000">
+
+          <label for="nascimento">Data de nascimento</label>
+          <input id="nascimento" name="nascimento" type="date" max="2007-12-31">
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço</legend>
+          <label for="cep">CEP</label>
+          <input id="cep" name="cep" type="text" inputmode="numeric" placeholder="00000-000" pattern="\d{5}-?\d{3}">
+
+          <label for="endereco">Endereço</label>
+          <input id="endereco" name="endereco" type="text" autocomplete="street-address">
+
+          <div class="grid">
+            <div>
+              <label for="cidade">Cidade</label>
+              <input id="cidade" name="cidade" type="text" autocomplete="address-level2">
+            </div>
+            <div>
+              <label for="estado">Estado</label>
+              <select id="estado" name="estado" autocomplete="address-level1">
+                <option value="">Selecione...</option>
+                <option value="SP">SP</option>
+                <option value="RJ">RJ</option>
+                <option value="MG">MG</option>
+                <option value="BA">BA</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Interesses</legend>
+          <label for="area">Área de atuação</label>
+          <select id="area" name="area" required>
+            <option value="">Selecione...</option>
+            <option value="acolhimento">Acolhimento</option>
+            <option value="oficinas">Oficinas</option>
+            <option value="juridico">Apoio jurídico</option>
+            <option value="comunicacao">Comunicação</option>
+          </select>
+
+          <label for="mensagem">Mensagem / Experiência</label>
+          <textarea id="mensagem" name="mensagem" rows="4" maxlength="1000" placeholder="Conte um pouco sobre você"></textarea>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" id="submitBtn">Enviar inscrição</button>
+          <button type="reset">Limpar</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year3"></span> Casa Aurora</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
